@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="db0ee901-abfa-4d5e-8155-4ff9fbcdd7f4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT 
+    b.id_booking,
+    p.nama,
+    b.tanggal,
+    b.lapangan,
+    b.status
+FROM booking b
+JOIN pelanggan p ON b.id_pelanggan = p.id_pelanggan;
+]]>
+	</queryString>
+	<field name="id_booking" class="java.lang.Integer"/>
+	<field name="nama" class="java.lang.String"/>
+	<field name="tanggal" class="java.lang.String"/>
+	<field name="lapangan" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="79" y="0" width="395" height="79" uuid="36a77644-6738-4c68-8028-7eb3fc81d386"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif" size="36"/>
+				</textElement>
+				<text><![CDATA[JADWAL BOOKING]]></text>
+			</staticText>
+			<image>
+				<reportElement x="474" y="0" width="81" height="79" uuid="b45f8300-bf47-4c20-ad65-9031df7ac6ef"/>
+				<imageExpression><![CDATA["C:\\Users\\Ridho\\Downloads\\bola.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="0" width="79" height="79" uuid="4ecce264-ec77-4ca2-bc60-17b5f8e36ce9"/>
+				<imageExpression><![CDATA["C:\\Users\\Ridho\\Downloads\\bola2.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="0" width="100" height="20" uuid="189b25b1-defb-4c07-a1f7-9b1e03b55ede"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[TABEL BOOKING]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="41" width="79" height="20" uuid="bb5f3f96-7213-4c4b-a5b2-2ff3446057e2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="79" y="41" width="78" height="20" uuid="e9af21c4-2e5f-4852-bda8-f675d8c29f24"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="157" y="41" width="138" height="20" uuid="8ce29c19-aea4-4643-99d5-2847b2df49d7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="295" y="41" width="134" height="20" uuid="7ddae44a-8e4d-4419-9e4d-0abf56baeae5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="429" y="41" width="126" height="20" uuid="3dc3f4f3-0eae-4491-afdd-ba99d1b092d6"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="41" width="79" height="20" uuid="5f47c9c0-427b-458f-b350-00acaf18b75a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Id Booking"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="41" width="78" height="20" uuid="9c5fabb0-0bc6-43cb-a7c5-b0ceadaf04b7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Id Pelanggan"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="157" y="41" width="138" height="20" uuid="4d7b6c7e-ad7b-493c-9bd2-8c99d595b74d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Tanggal"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="41" width="134" height="20" uuid="43e3817f-bb09-49af-b67c-fd21c567c080"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Lapangan"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="41" width="126" height="20" uuid="f7a0963b-272c-49c8-afc6-312c102333c5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Status"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="79" height="20" uuid="716762a4-e081-42ca-b040-56f050786a54"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="79" y="0" width="78" height="20" uuid="5c6b0e65-9a99-47b1-bf3a-39f303e1dab7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="157" y="0" width="138" height="20" uuid="bb76a007-4683-441c-b8c6-418277138da6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="295" y="0" width="134" height="20" uuid="7309dd29-1722-4993-873f-f8d7af118f91"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="429" y="0" width="126" height="20" uuid="e013adb3-3494-47b2-9e68-d6cdf61efc07"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="79" height="20" uuid="55ff2d3d-d019-4bc1-b481-4a9b02a9d499"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{id_booking}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="157" y="0" width="138" height="20" uuid="de77db73-f91e-4c54-bcf3-f942fbd053ba"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="0" width="134" height="20" uuid="49daee43-ee4f-4ea1-b8f4-b818336aaf8f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{lapangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="0" width="126" height="20" uuid="d7e3f5c6-9c05-4417-b6f1-5c4292aaa1d0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="0" width="78" height="20" uuid="d1249b13-14ee-482f-97b1-8f0681fa8977"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
